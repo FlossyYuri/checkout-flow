@@ -5,6 +5,7 @@ import PaypalIcon from '../assets/image/paypal.png';
 import VisaIcon from '../assets/image/visa.png';
 import SafePaymentsIcon from '../assets/image/compra-segura.webp';
 import WarrantyIcon from '../assets/image/garantia.png';
+import CustomerForm from '../components/forms/CustomerForm';
 
 const IndexPage = () => (
   <div className='w-full flex flex-col items-stretch min-h-screen'>
@@ -45,31 +46,7 @@ const IndexPage = () => (
         />
       </div>
       <div className='grid grid-cols-2 gap-4 mt-4'>
-        <section>
-          <h2>Detalhes de Faturamento</h2>
-          <form>
-            <input
-              className='p-2 border w-full'
-              type='text'
-              placeholder='Nome Completo'
-            />
-            <input
-              className='p-2 border w-full'
-              type='text'
-              placeholder='Numero de celular'
-            />
-            <input
-              className='p-2 border w-full'
-              type='email'
-              placeholder='Endereço de email'
-            />
-            <input
-              className='p-2 border w-full'
-              type='email'
-              placeholder='Confirmação de endereço de email'
-            />
-          </form>
-        </section>
+        <CustomerForm />
         <section>
           <h2>Seu Pedido</h2>
           <p>Produto - Subtotal</p>
@@ -97,25 +74,27 @@ const IndexPage = () => (
         </section>
       </div>
     </main>
-    <footer className='grid grid-cols-1 md:grid-cols-2 mt-8 gap-4 bg-gray-200 p-8'>
-      <div className='flex justify-center md:justify-end'>
-        <Image
-          className='object-contain'
-          src={SafePaymentsIcon}
-          height={100}
-          width={200}
-          alt='Safe payments icon'
-        />
-      </div>
-      <div className='flex flex-col items-center md:flex-row text-center md:text-left flex-1'>
-        <Image
-          className='object-contain'
-          src={WarrantyIcon}
-          height={100}
-          width={200}
-          alt='Warranty Badge'
-        />
-        <div className='flex flex-col'>
+    <footer className='mt-8 bg-gray-200 p-8'>
+      <div className='max-w-4xl mx-auto flex flex-col md:flex-row'>
+        <div className='flex-1 flex justify-center'>
+          <Image
+            className='object-contain'
+            src={SafePaymentsIcon}
+            height={100}
+            width={200}
+            alt='Safe payments icon'
+          />
+        </div>
+        <div className='flex-1 flex justify-center'>
+          <Image
+            className='object-contain'
+            src={WarrantyIcon}
+            height={100}
+            width={200}
+            alt='Warranty Badge'
+          />
+        </div>
+        <div className='flex flex-col flex-1 justify-center'>
           <p className='text-red-500 font-bold'>100% Livre de Risco</p>
           <p className='md:max-w-sm'>
             se houver qualquer problema com o produto ou não ficar satisfeito(a)
