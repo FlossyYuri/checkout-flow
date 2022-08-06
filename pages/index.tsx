@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import YouTube, { YouTubeProps } from 'react-youtube';
+import MugsImage from '../assets/image/exemplos/mugs.jpg';
+import PrintImage from '../assets/image/exemplos/printandcut.jpg';
+import TopperImage from '../assets/image/exemplos/topper.jpg';
+import Example1Image from '../assets/image/cricut/rsz_1-min.png';
+import Example2Image from '../assets/image/cricut/rsz_2-min.png';
 import CricutImage from '../assets/image/cricut/topo.png';
-import CricutAbertaImage from '../assets/image/cricut/maquinaaberta.png';
+import SeloImage from '../assets/image/selo.png';
 import CompraSeguraImage from '../assets/image/comprasegura.png';
 import MpesaIcon from '../assets/image/mpesa.png';
 import Ponto24Icon from '../assets/image/ponto-24.png';
@@ -10,6 +15,7 @@ import TransferIcon from '../assets/image/transfer.png';
 import EntidadeIcon from '../assets/image/entidade.png';
 import OrderButton from '../components/OrderButton';
 import Collapsible from 'react-collapsible';
+import Review from '../components/Review';
 
 const CheckoutPage = () => {
   const onPlayerReady: YouTubeProps['onReady'] = (event) => {
@@ -36,13 +42,13 @@ const CheckoutPage = () => {
   return (
     <main className='w-full flex flex-col items-stretch min-h-screen'>
       <div className=' bg-cricut-gray'>
-        <h1 className='text-cricut-green text-xl sm:text-2xl font-semibold text-center py-4 px-2'>
+        <h1 className='text-cricut-green text-xl sm:text-2xl font-semibold text-center py-4 px-4'>
           Fature a partir de <span className='font-bold'>4.000,00MT</span> por
           semana <br className='hidden sm:block' />
           Trabalhando com personalizados
         </h1>
       </div>
-      <section className='container mx-auto text-center py-4 mb-8 px-2 flex flex-col items-center'>
+      <section className='container mx-auto text-center py-4 mb-8 px-4 flex flex-col items-center'>
         <h2 className='text-xl sm:text-3xl'>
           "Papelaria personalizada Revela a{' '}
           <span className='text-cricut-green font-semibold'>
@@ -74,7 +80,7 @@ const CheckoutPage = () => {
         </p>
         <OrderButton />
       </section>
-      <section className='w-full bg-cricut-green py-24 px-2 text-center clip-right'>
+      <section className='w-full bg-cricut-green py-24 px-4 text-center clip-right'>
         <div className='container flex flex-col items-center mx-auto'>
           <h2 className='text-3xl text-white font-semibold'>
             A Cricut Explore Air 2
@@ -92,29 +98,82 @@ const CheckoutPage = () => {
           </div>
         </div>
       </section>
-      <section className='w-full py-4 px-2'>
+      <section className='w-full py-4 px-4'>
         <div className='container flex flex-col items-center mx-auto'>
-          <h2 className='text-3xl text-cricut-green text-center font-semibold'>
-            O que você pode fazer com a maquina
+          <h2 className='text-3xl text-cricut-green text-center font-semibold mb-8'>
+            O que você
+            <span className='bg-cricut-green text-white'> pode fazer </span> com
+            a maquina
           </h2>
-          <div className='max-w-md'>
-            <Image src={CricutAbertaImage} alt='Cricut explore air 2 image' />
+          <div>
+            <Image src={Example1Image} alt='Cricut explore air 2 image' />
           </div>
-          <section className='grid grid-cols-4 gap-4 text-center'>
-            <article className='bg-cricut-green bg-opacity-50 rounded-xl p-4'>
-              <div className='w-full'>
-                <Image
-                  src={CricutAbertaImage}
-                  alt='Cricut explore air 2 image'
-                />
+          <div>
+            <Image src={Example2Image} alt='Cricut explore air 2 image' />
+          </div>
+        </div>
+      </section>
+      <section className='w-full bg-cricut-green py-24 px-4 text-center clip-right'>
+        <h2 className='text-3xl text-white font-semibold mb-8'>
+          QUEM COMPROU, <br className='block sm:hidden' />
+          <span className='bg-white text-cricut-green'>NÃO SE ARREPENDEU!</span>
+        </h2>
+        <div className='container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+          <Review
+            title='A minha filha amou!'
+            name='Nicole Domingos'
+            description='Adorei isso. Chegou a tempo em ótimas condições. Foi fácil de configurar e aprender a usar. Minha filha e eu fizemos topos de bolo no mesmo dia do recebimento. Muito fácil.'
+            image={TopperImage}
+          />
+          <Review
+            title='A Cricut é maravilhosa'
+            name='Victor Uamusse'
+            description='A maquina foi entregue dentro do prazo, e é exatamente como eu esperava. Acabamos de começar a usar o produto, e até agora tem sido espetacular! Conseguimos usar o programa tanto no celular como no laptop de forma simples.'
+            image={PrintImage}
+          />
+          <Review
+            title='Divertido para pessoas criativas'
+            name='Marcia Boaventura'
+            description='Divertido de usar. Ótimo para personalizar itens simples. Use-o muito para projetos de festas e rótulos.'
+            image={MugsImage}
+          />
+        </div>
+      </section>
+      <section className='w-full py-16 px-4'>
+        <h2 className='text-3xl font-semibold'>
+          Ganhe um <span className='text-cricut-green'>Bonus Especial</span> de{' '}
+          <span className='text-cricut-green'>Garantia</span> da Cricut
+        </h2>
+      </section>
+      <section className='w-full py-16 px-4'>
+        <div className='container mx-auto'>
+          <section className='grid gap-4 grid-cols-1 sm:grid-cols-2'>
+            <article>
+              <p className='mb-4 text-gray-400 text-lg font-light tracking-wide'>
+                Risco zero para você!
+              </p>
+              <h2 className='text-3xl font-semibold'>
+                <span className='text-cricut-green'>1 ano </span> de{' '}
+                <span className='text-cricut-green'>Garantia</span> da Cricut
+              </h2>
+              <div className='h-1 w-1/5 my-4 bg-cricut-green rounded clip-right'></div>
+              <p>
+                Ainda não tem certeza? Não se preocupe. <br /> 1 ano de garantia
+                com total cobertura pela Assistência <br /> Técnica da Cricut
+                para caso tenha algum problema com a maquina. <br />
+                Caso a maquina tenha algum defeito de fábrica, nós trocamos para
+                você sem nenhum custo adicional e muita burocracia.
+              </p>
+            </article>
+            <article className='flex justify-center'>
+              <div className='w-1/2 '>
+                <Image src={SeloImage} alt='Cricut explore air 2 image' />
               </div>
-              <h3 className='font-semibold text-white text-xl'>Corte</h3>
-              <p></p>
             </article>
           </section>
         </div>
       </section>
-      <section className='w-full bg-cricut-green py-24 px-2 text-center clip-top-left'>
+      <section className='w-full bg-cricut-green py-24 px-4 text-center clip-top-left'>
         <div className='container flex flex-col items-center mx-auto'>
           <h2 className='text-3xl text-white font-semibold tracking-wide leading-normal'>
             OFERTA <span className='bg-white text-cricut-green'>ESPECIAL</span>{' '}
@@ -178,7 +237,7 @@ const CheckoutPage = () => {
           </div>
         </div>
       </section>
-      <section className='w-full py-16 px-2'>
+      <section className='w-full py-16 px-4'>
         <div className='container flex flex-col items-center mx-auto'>
           <h2 className='text-3xl text-cricut-green text-center font-semibold'>
             Perguntas frequentes
@@ -199,9 +258,14 @@ const CheckoutPage = () => {
           </section>
         </div>
       </section>
-      <footer className='py-8 text-center bg-cricut-green bg-opacity-50'>
-        <div className='flex'></div>
-        <p>© Print Flow - Todos os Direitos Reservados.</p>
+      <footer className='py-8 text-center bg-cricut-green bg-opacity-50 flex flex-col items-center text-white'>
+        <div className='flex gap-8'>
+          <span>Termos de uso aplicáveis</span>
+          <span>Políticas de privacidade</span>
+        </div>
+        <p className='text-white'>
+          © Print Flow - Todos os Direitos Reservados.
+        </p>
       </footer>
     </main>
   );

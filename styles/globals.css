@@ -4,6 +4,9 @@
 * {
   font-family: 'Poppins', sans-serif;
 }
+.container {
+  max-width: 1180px;
+}
 .video-container {
   position: relative;
   width: 100%;
