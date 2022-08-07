@@ -1,24 +1,24 @@
 import Image from 'next/image';
+import Collapsible from 'react-collapsible';
 import YouTube, { YouTubeProps } from 'react-youtube';
-import MugsImage from '../assets/image/exemplos/mugs.jpg';
-import PrintImage from '../assets/image/exemplos/printandcut.jpg';
-import TopperImage from '../assets/image/exemplos/topper.jpg';
+import CompraSeguraImage from '../assets/image/comprasegura.png';
 import Example1Image from '../assets/image/cricut/rsz_1-min.png';
 import Example2Image from '../assets/image/cricut/rsz_2-min.png';
 import CricutImage from '../assets/image/cricut/topo.png';
-import SeloImage from '../assets/image/selo.png';
-import CompraSeguraImage from '../assets/image/comprasegura.png';
-import MpesaIcon from '../assets/image/mpesa.png';
-import Ponto24Icon from '../assets/image/ponto-24.png';
-import VisaIcon from '../assets/image/visa.png';
-import TransferIcon from '../assets/image/transfer.png';
-import Transfer2Icon from '../assets/image/transfer2.png';
 import EntidadeIcon from '../assets/image/entidade.png';
 import Entidade2Icon from '../assets/image/entidade2.png';
+import MugsImage from '../assets/image/exemplos/mugs.jpg';
+import PrintImage from '../assets/image/exemplos/printandcut.jpg';
+import TopperImage from '../assets/image/exemplos/topper.jpg';
+import MpesaIcon from '../assets/image/mpesa.png';
+import Ponto24Icon from '../assets/image/ponto-24.png';
+import SeloImage from '../assets/image/selo.png';
+import TransferIcon from '../assets/image/transfer.png';
+import Transfer2Icon from '../assets/image/transfer2.png';
+import VisaIcon from '../assets/image/visa.png';
+import MetaPixel from '../components/MetaPixel';
 import OrderButton from '../components/OrderButton';
-import Collapsible from 'react-collapsible';
 import Review from '../components/Review';
-import Pixel from '../components/Pixel';
 
 const CheckoutPage = () => {
   const onPlayerReady: YouTubeProps['onReady'] = (event) => {
@@ -375,7 +375,7 @@ const CheckoutPage = () => {
           © Print Flow - Todos os Direitos Reservados.
         </p>
       </footer>
-      <Pixel name='FACEBOOK_PIXEL_1' />
+      <MetaPixel />
     </main>
   );
 };
