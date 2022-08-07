@@ -2,19 +2,35 @@ interface Props {
   inverted?: boolean;
 }
 
-const OrderButton = ({ inverted = false }: Props) => (
-  <button
-    className={`${
-      inverted
-        ? 'bg-white  text-cricut-green inverted'
-        : 'bg-cricut-green text-white'
-    } rounded-xl py-2 px-4 w-full sm:w-max flex flex-col`}
-  >
-    <span className='uppercase font-semibold'>
-      Eu quero encomendar uma maquina
-    </span>
-    <span className='text-sm'>Entrega de 3 a 7 dias</span>
-  </button>
-);
+const OrderButton = ({ inverted = false }: Props) => {
+  const handleSubmit = () => {
+    import('react-facebook-pixel')
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init('1968198653570585');
+        ReactPixel.track('Contact');
+      });
+    window.open(
+      'https://api.whatsapp.com/send/?phone=258851755378&text=Ol%C3%A1%2C+venho+do+website+e+quero+comprar+a+Cricut+Explore+Air+2.&type=phone_number&app_absent=0',
+      '_blank'
+    );
+  };
+  return (
+    <button
+      type='button'
+      onClick={handleSubmit}
+      className={`${
+        inverted
+          ? 'bg-white  text-cricut-green inverted'
+          : 'bg-cricut-green text-white'
+      } rounded-xl py-2 px-4 w-full sm:w-max flex flex-col`}
+    >
+      <span className='uppercase font-semibold'>
+        Eu quero encomendar uma maquina
+      </span>
+      <span className='text-sm'>Entrega de 2 a 7 dias</span>
+    </button>
+  );
+};
 
 export default OrderButton;
