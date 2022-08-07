@@ -18,6 +18,7 @@ import Entidade2Icon from '../assets/image/entidade2.png';
 import OrderButton from '../components/OrderButton';
 import Collapsible from 'react-collapsible';
 import Review from '../components/Review';
+import Pixel from '../components/Pixel';
 
 const CheckoutPage = () => {
   const onPlayerReady: YouTubeProps['onReady'] = (event) => {
@@ -374,6 +375,7 @@ const CheckoutPage = () => {
           © Print Flow - Todos os Direitos Reservados.
         </p>
       </footer>
+      <Pixel name='FACEBOOK_PIXEL_1' />
     </main>
   );
 };
