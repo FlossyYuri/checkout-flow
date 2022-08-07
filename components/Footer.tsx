@@ -3,7 +3,7 @@ import EmailIcon from '../assets/icons/Email';
 import WhatsappIcon from '../assets/icons/Whatsapp';
 
 export default () => (
-  <footer className='pb-8 pt-16 text-center bg-gradient-to-t from-cricut-green bg-opacity-50 flex flex-col items-center text-white'>
+  <footer className='pb-8 pt-20 text-center bg-gradient-to-t from-cricut-green to-gray-800 bg-opacity-50 flex flex-col items-center text-white clip-top-left'>
     <section className='flex flex-wrap gap-8 mb-4'>
       <article>
         <a

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import YouTube, { YouTubeProps } from 'react-youtube';
+import CheckIcon from '../assets/icons/Check';
 import CompraSeguraImage from '../assets/image/comprasegura.png';
 import Example1Image from '../assets/image/cricut/rsz_1-min.png';
 import Example2Image from '../assets/image/cricut/rsz_2-min.png';
@@ -142,10 +143,134 @@ const CheckoutPage = () => {
         </div>
       </section>
       <section className='w-full py-16 px-4'>
-        <h2 className='text-3xl font-semibold'>
-          Ganhe um <span className='text-cricut-green'>Bonus Especial</span> de{' '}
-          <span className='text-cricut-green'>Garantia</span> da Cricut
-        </h2>
+        <div className='container flex flex-col items-center mx-auto'>
+          <h2 className='text-3xl font-semibold mb-8'>
+            <span className='text-white bg-cricut-green px-4'>
+              Garanta seu Bonus Especial
+            </span>
+            <div className='clip-right mt-2 h-2 bg-cricut-green w-full'></div>
+          </h2>
+          <section className='grid grid-cols-1 lg:items-center sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center'>
+            <article
+              style={{
+                boxShadow:
+                  'rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset',
+              }}
+              className='border-2 border-cricut-green border-opacity-50 rounded-xl overflow-hidden'
+            >
+              <h3 className='bg-cricut-green text-white px-4 py-2 text-xl font-semibold'>
+                #1 Uma aula presencial
+              </h3>
+              <p className='p-4'>
+                Você ganha
+                <span className='bg-cricut-green text-white px-2'>
+                  1 aula presencial
+                </span>
+                com um profissional da PrintFlow que vai te ensinar o básico que
+                você precisa para começar.
+              </p>
+            </article>
+            <article
+              style={{
+                boxShadow:
+                  'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px',
+              }}
+              className='border-2 border-cricut-green border-opacity-50 bg-cricut-green rounded-xl overflow-hidden'
+            >
+              <h3 className='bg-white text-cricut-green px-4 py-2 text-xl font-semibold'>
+                #2 Lista de fornecedores
+              </h3>
+              <p className='p-4 text-white text-lg'>
+                Você irá ganhar um ficheiro com uma{' '}
+                <span className='bg-white text-cricut-green px-2'>
+                  lista de fornecedores
+                </span>{' '}
+                (com os{' '}
+                <span className='bg-white text-cricut-green px-2'>
+                  melhores preços
+                </span>
+                ) dos materiais que você precisa para fazer seus personalizados.{' '}
+                Com esta lista{' '}
+                <span className='bg-white text-cricut-green px-2'>
+                  seu lucro será maior
+                </span>{' '}
+                pois estes fornecedores tem os melhores preços do mercado.
+              </p>
+            </article>
+            <article
+              style={{
+                boxShadow:
+                  'rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset',
+              }}
+              className='border-2 border-cricut-green border-opacity-50 rounded-xl overflow-hidden'
+            >
+              <h3 className='bg-cricut-green text-white px-4 py-2 text-xl font-semibold'>
+                #3 Mini Curso em video
+              </h3>
+              <p className='p-4'>
+                Você ganha um{' '}
+                <span className='bg-cricut-green text-white px-2'>
+                  mini curso
+                </span>{' '}
+                com video aulas que ensinaram você a utilizar e explorar sua
+                maquina fazendo personalizados maravilhosos
+              </p>
+            </article>
+          </section>
+        </div>
+      </section>
+      <section className='w-full bg-cricut-green py-32 px-4 text-center text-white italic clip-right'>
+        <h2 className='text-3xl font-semibold mb-8'>Quanto vale tudo isso?</h2>
+        <ul className='container mx-auto gap-4 text-left'>
+          <li className='flex items-center'>
+            <div className='transform scale-75 mr-4'>
+              <CheckIcon />
+            </div>
+            <div className='flex-1'>
+              <p className='text-xl flex items-center'>
+                Cricut Explore Air 2
+                <span className='border-t-2 border-white border-dashed flex-1 ml-8'></span>
+              </p>
+              <p className='text-2xl font-semibold line-through'>45,000.00MT</p>
+            </div>
+          </li>
+          <li className='flex items-center'>
+            <div className='transform scale-75 mr-4'>
+              <CheckIcon />
+            </div>
+            <div className='flex-1'>
+              <p className='text-xl flex items-center'>
+                1 aula presencial
+                <span className='border-t-2 border-white border-dashed flex-1 ml-8'></span>
+              </p>
+              <p className='text-2xl font-semibold line-through'>2,000.00MT</p>
+            </div>
+          </li>
+          <li className='flex items-center'>
+            <div className='transform scale-75 mr-4'>
+              <CheckIcon />
+            </div>
+            <div className='flex-1'>
+              <p className='text-xl flex items-center'>
+                Lista de fornecedores baratos
+                <span className='border-t-2 border-white border-dashed flex-1 ml-8'></span>
+              </p>
+              <p className='text-2xl font-semibold line-through'>300.00MT</p>
+            </div>
+          </li>
+          <li className='flex items-center'>
+            <div className='transform scale-75 mr-4'>
+              <CheckIcon />
+            </div>
+            <div className='flex-1'>
+              <p className='text-xl flex items-center'>
+                Mini Curso de Design Space
+                <span className='border-t-2 border-white border-dashed flex-1 ml-8'></span>
+              </p>
+              <p className='text-2xl font-semibold line-through'>3,500.00MT</p>
+            </div>
+          </li>
+        </ul>
       </section>
       <section className='w-full py-16 px-4'>
         <div className='container mx-auto'>
