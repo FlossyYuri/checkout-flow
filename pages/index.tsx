@@ -309,8 +309,8 @@ const CheckoutPage = () => {
                   para você sem nenhum custo adicional e muita burocracia.
                 </p>
               </article>
-              <article className='flex justify-center'>
-                <div className='w-1/2 '>
+              <article className='flex justify-center items-center'>
+                <div className='w-2/3 sm:w-full md:w-1/2 '>
                   <Image src={SeloImage} alt='Cricut explore air 2 image' />
                 </div>
               </article>
