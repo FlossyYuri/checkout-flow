@@ -28,7 +28,7 @@ const OrderButton = ({ inverted = false }: Props) => {
       <span className='uppercase font-semibold'>
         Eu quero encomendar uma maquina
       </span>
-      <span className='text-sm'>Entrega de 2 a 7 dias</span>
+      <span className='text-sm w-full'>Entrega de 2 a 7 dias</span>
     </button>
   );
 };
