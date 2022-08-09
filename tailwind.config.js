@@ -10,6 +10,7 @@ module.exports = {
       },
       colors: {
         'cricut-green': '#01C38A',
+        'warning-red': '#ff3e4e',
         'cricut-gray': '#F2F2F2',
       },
     }

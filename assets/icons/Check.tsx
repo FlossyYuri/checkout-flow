@@ -16,7 +16,7 @@ const CheckIcon = () => (
         id='svg_1'
         className='selected'
         fill='#ffffff'
-        fill-opacity='1'
+        fillOpacity='1'
       />
     </g>
   </svg>

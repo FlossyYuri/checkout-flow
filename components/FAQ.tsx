@@ -67,7 +67,7 @@ export default () => (
                 <span className='text-cricut-green'>
                   Número de conta <span className='underline'>MOZA</span>:
                 </span>{' '}
-                <span className='underline'>00050536575</span>
+                <span className='underline'>1016151810001</span>
               </p>
             </article>
             <article className='shadow-md rounded-xl p-2'>

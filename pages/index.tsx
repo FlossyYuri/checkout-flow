@@ -22,8 +22,11 @@ import Footer from '../components/Footer';
 import MetaPixel from '../components/MetaPixel';
 import OrderButton from '../components/OrderButton';
 import Review from '../components/Review';
+import Modal from '../components/Modals/PaymentIntructions';
+import { useState } from 'react';
 
 const CheckoutPage = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const onPlayerReady: YouTubeProps['onReady'] = (event) => {
     // access to player in all event handlers via event.target
     event.target.pauseVideo();
@@ -39,6 +42,7 @@ const CheckoutPage = () => {
       autoplay: 1,
       controls: 0,
       disablekb: 1,
+      enablejsapi: 1,
       modestbranding: 1,
       showinfo: 0,
       rel: 0,
@@ -85,7 +89,8 @@ const CheckoutPage = () => {
             <br />
             Clique aqui ⬇️⬇️⬇️
           </p>
-          <OrderButton />
+          {isOpen && <Modal setIsOpen={setIsOpen} />}
+          <OrderButton onClick={() => setIsOpen(true)} />
         </section>
         <section className='w-full bg-cricut-green py-24 px-4 text-center clip-right'>
           <div className='container flex flex-col items-center mx-auto'>
@@ -153,9 +158,10 @@ const CheckoutPage = () => {
         </section>
         <section className='w-full py-16 px-4'>
           <div className='container flex flex-col items-center mx-auto'>
-            <h2 className='text-3xl font-semibold mb-8'>
+            <h2 className='text-3xl font-semibold mb-8 text-center'>
+              Garanta seu <br className='sm:hidden' />
               <span className='text-white bg-cricut-green px-4'>
-                Garanta seu Bonus Especial
+                Bonus Especial
               </span>
               <div className='clip-right mt-2 h-2 bg-cricut-green w-full'></div>
             </h2>
@@ -339,7 +345,7 @@ const CheckoutPage = () => {
               <Image src={CricutImage} alt='Cricut explore air 2 image' />
             </div>
             <p className='text-3xl mb-4'>⬇️⬇️⬇️</p>
-            <OrderButton inverted />
+            <OrderButton onClick={() => setIsOpen(true)} inverted />
             <div className='max-w-xs mt-8'>
               <Image className='w-full' src={CompraSeguraImage} alt='' />
             </div>
