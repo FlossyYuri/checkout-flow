@@ -19,7 +19,7 @@ const EmailIcon = () => (
         fill='#01c387'
         fillOpacity='1'
         stroke='#01c387'
-        stroke-opacity='1'
+        strokeOpacity='1'
       />
     </g>
   </svg>

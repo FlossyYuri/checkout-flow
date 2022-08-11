@@ -3,10 +3,12 @@ import Image from 'next/image';
 import YouTube, { YouTubeProps } from 'react-youtube';
 import CheckIcon from '../assets/icons/Check';
 import CompraSeguraImage from '../assets/image/comprasegura.png';
+import CompraSeguraImage2 from '../assets/image/comprasegura2.png';
 import Example1Image from '../assets/image/cricut/rsz_1-min.png';
 import Example2Image from '../assets/image/cricut/rsz_2-min.png';
 import CricutImage from '../assets/image/cricut/topo.png';
 import EntidadeIcon from '../assets/image/entidade.png';
+import Entidade2Icon from '../assets/image/entidade2.png';
 import MugsImage from '../assets/image/exemplos/mugs.jpg';
 import PrintImage from '../assets/image/exemplos/printandcut.jpg';
 import TopperImage from '../assets/image/exemplos/topper.jpg';
@@ -14,6 +16,7 @@ import MpesaIcon from '../assets/image/mpesa.png';
 import Ponto24Icon from '../assets/image/ponto-24.png';
 import SeloImage from '../assets/image/selo.png';
 import TransferIcon from '../assets/image/transfer.png';
+import Transfer2Icon from '../assets/image/transfer2.png';
 import VisaIcon from '../assets/image/visa.png';
 import LogoIcon from '../assets/image/icon.png';
 import OGImage from '../assets/image/cricut/1-min.png';
@@ -40,6 +43,8 @@ const CheckoutPage = () => {
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
+      loop: 1,
+
       controls: 0,
       disablekb: 1,
       enablejsapi: 1,
@@ -74,16 +79,26 @@ const CheckoutPage = () => {
               Cricut Explore Air 2
             </span>
           </p>
-          <span className='text-cricut-green font-semibold text-2xl mt-2 sm:hidden'>
-            Cricut Explore Air 2
-          </span>
-          <YouTube
-            className='my-4 video-container border-8 border-cricut-green rounded-lg'
-            iframeClassName='video'
-            videoId='ysQ1Xvm6m-0'
-            opts={opts}
-            onReady={onPlayerReady}
-          />
+          <div className='container flex flex-col items-center mx-auto'>
+            <h2 className='text-3xl text-cricut-green font-semibold tracking-wide leading-normal'>
+              OFERTA{' '}
+              <span className='bg-cricut-green text-white'>ESPECIAL</span>{' '}
+              <br />
+              POR{' '}
+              <span className='bg-cricut-green text-white'>TEMPO LIMITADO</span>
+            </h2>
+            <div className='my-4'>
+              <p className='text-xl font-semibold text-cricut-green  line-through'>
+                <span className='text-base'>antes </span>45.000,00MT
+              </p>
+              <p className='text-3xl font-semibold text-cricut-green'>
+                <span className='text-base'>depois </span>34.999,00MT
+              </p>
+            </div>
+            <div className='max-w-md'>
+              <Image src={CricutImage} alt='Cricut explore air 2 image' />
+            </div>
+          </div>
           <p className='text-xl mb-2'>
             Restam apenas 2 maquinas em stock prontas para entrega.
             <br />
@@ -91,6 +106,46 @@ const CheckoutPage = () => {
           </p>
           {isOpen && <Modal setIsOpen={setIsOpen} />}
           <OrderButton onClick={() => setIsOpen(true)} />
+          <div className='max-w-xs mt-8'>
+            <Image className='w-full' src={CompraSeguraImage2} alt='' />
+          </div>
+          <div className='flex gap-8 justify-center mt-4'>
+            <Image
+              className='object-contain'
+              width={100}
+              height={40}
+              src={MpesaIcon}
+              alt='Mpesa Logo'
+            />
+            <Image
+              className='object-contain'
+              width={100}
+              height={40}
+              src={Ponto24Icon}
+              alt='Mpesa Logo'
+            />
+            <Image
+              className='object-contain'
+              width={100}
+              height={40}
+              src={VisaIcon}
+              alt='Mpesa Logo'
+            />
+            <Image
+              className='object-contain'
+              width={100}
+              height={40}
+              src={Transfer2Icon}
+              alt='Mpesa Logo'
+            />
+            <Image
+              className='object-contain'
+              width={100}
+              height={40}
+              src={Entidade2Icon}
+              alt='Mpesa Logo'
+            />
+          </div>
         </section>
         <section className='w-full bg-cricut-green py-24 px-4 text-center clip-right'>
           <div className='container flex flex-col items-center mx-auto'>
