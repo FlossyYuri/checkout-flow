@@ -7,6 +7,7 @@ import CompraSeguraImage2 from '../assets/image/comprasegura2.png';
 import Example1Image from '../assets/image/cricut/rsz_1-min.png';
 import Example2Image from '../assets/image/cricut/rsz_2-min.png';
 import CricutImage from '../assets/image/cricut/topo.png';
+import CricutAberta from '../assets/image/cricut/maquinaaberta.png';
 import EntidadeIcon from '../assets/image/entidade.png';
 import Entidade2Icon from '../assets/image/entidade2.png';
 import MugsImage from '../assets/image/exemplos/mugs.jpg';
@@ -161,7 +162,7 @@ const CheckoutPage = () => {
               materiais de até 1,7mm de espessura com precisão!
             </p>
             <div className='max-w-md'>
-              <Image src={CricutImage} alt='Cricut explore air 2 image' />
+              <Image src={CricutAberta} alt='Cricut explore air 2 image' />
             </div>
           </div>
         </section>
