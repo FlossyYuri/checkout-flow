@@ -28,7 +28,7 @@
     rgba(1, 195, 138, 0.2) 9px 9px, rgba(1, 195, 138, 0.1) 12px 12px,
     rgba(1, 195, 138, 0.05) 15px 15px;
 } */
-button.bg-cricut-green {
+button.cta.bg-cricut-green {
   box-shadow: rgba(1, 195, 138, 0.4) 5px 5px, rgba(1, 195, 138, 0.3) 10px 10px,
     rgba(1, 195, 138, 0.2) 15px 15px, rgba(1, 195, 138, 0.1) 20px 20px,
     rgba(1, 195, 138, 0.05) 25px 25px;

@@ -3,6 +3,14 @@ import Collapsible from 'react-collapsible';
 import Entidade2Icon from '../assets/image/entidade2.png';
 import Transfer2Icon from '../assets/image/transfer2.png';
 import MpesaIcon from '../assets/image/mpesa.png';
+import {
+  ENTIDADE,
+  MOZA,
+  MPESA_NAME,
+  MPESA_NUMBER,
+  NIB,
+  REFERENCIA,
+} from '../constants';
 
 export default () => (
   <section className='w-full py-16 px-4'>
@@ -44,11 +52,11 @@ export default () => (
               <p className='mt-2'>Pagamento por Entidade e Referência</p>
               <p>
                 <span className='text-cricut-green'>Entidade:</span>{' '}
-                <span className='underline'>99943</span>
+                <span className='underline'>{ENTIDADE}</span>
               </p>
               <p>
                 <span className='text-cricut-green'>Referência:</span>{' '}
-                <span className='underline'>00050536575</span>
+                <span className='underline'>{REFERENCIA}</span>
               </p>
             </article>
             <article className='shadow-md rounded-xl p-2'>
@@ -61,13 +69,13 @@ export default () => (
               <p className='mt-2'>Pagamento por transferência bancária</p>
               <p>
                 <span className='text-cricut-green'>NIB:</span>{' '}
-                <span className='underline'>003400001016151810196</span>
+                <span className='underline'>{NIB}</span>
               </p>
               <p>
                 <span className='text-cricut-green'>
                   Número de conta <span className='underline'>MOZA</span>:
                 </span>{' '}
-                <span className='underline'>00050536575</span>
+                <span className='underline'>{MOZA}</span>
               </p>
             </article>
             <article className='shadow-md rounded-xl p-2'>
@@ -80,11 +88,11 @@ export default () => (
               <p className='mt-2'>M-Pesa</p>
               <p>
                 <span className='text-cricut-green'>Número:</span>{' '}
-                <span className='underline'>851755378</span>
+                <span className='underline'>{MPESA_NUMBER}</span>
               </p>
               <p>
                 <span className='text-cricut-green'>Nome:</span>{' '}
-                <span className='underline'>EM****N C****E</span>
+                <span className='underline'>{MPESA_NAME}</span>
               </p>
             </article>
             <article className='sm:col-span-3 font-semibold'>
