@@ -15,6 +15,22 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
             rel='stylesheet'
           />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-250XC6BT46`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-250XC6BT46', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
         </Head>
         <body onContextMenu={(e) => e.preventDefault()}>
           <Main />
