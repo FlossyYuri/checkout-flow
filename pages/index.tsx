@@ -31,29 +31,29 @@ import { useState } from 'react';
 
 const CheckoutPage = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const onPlayerReady: YouTubeProps['onReady'] = (event) => {
-    // access to player in all event handlers via event.target
-    event.target.pauseVideo();
-  };
+  // const onPlayerReady: YouTubeProps['onReady'] = (event) => {
+  //   // access to player in all event handlers via event.target
+  //   event.target.pauseVideo();
+  // };
 
-  const opts: YouTubeProps['opts'] = {
-    frameborder: 0,
-    height: '360',
-    width: '640',
-    allow: 'accelerometer; autoplay; encrypted-media; gyroscope;',
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-      loop: 1,
+  // const opts: YouTubeProps['opts'] = {
+  //   frameborder: 0,
+  //   height: '360',
+  //   width: '640',
+  //   allow: 'accelerometer; autoplay; encrypted-media; gyroscope;',
+  //   playerVars: {
+  //     // https://developers.google.com/youtube/player_parameters
+  //     autoplay: 1,
+  //     loop: 1,
 
-      controls: 0,
-      disablekb: 1,
-      enablejsapi: 1,
-      modestbranding: 1,
-      showinfo: 0,
-      rel: 0,
-    },
-  };
+  //     controls: 0,
+  //     disablekb: 1,
+  //     enablejsapi: 1,
+  //     modestbranding: 1,
+  //     showinfo: 0,
+  //     rel: 0,
+  //   },
+  // };
 
   return (
     <>
@@ -88,14 +88,6 @@ const CheckoutPage = () => {
               POR{' '}
               <span className='bg-cricut-green text-white'>TEMPO LIMITADO</span>
             </h2>
-            <div className='my-4'>
-              <p className='text-xl font-semibold text-cricut-green  line-through'>
-                <span className='text-base'>antes </span>45.000,00MT
-              </p>
-              <p className='text-3xl font-semibold text-cricut-green'>
-                <span className='text-base'>depois </span>34.999,00MT
-              </p>
-            </div>
             <div className='max-w-md'>
               <Image src={CricutImage} alt='Cricut explore air 2 image' />
             </div>
